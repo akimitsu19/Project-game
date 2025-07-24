@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCG Game on IC</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #game-log { 
+            white-space: pre-wrap; 
+            background-color: #f0f0f0; 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            min-height: 200px; 
+            margin-bottom: 10px;
+        }
+        input, button { padding: 8px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h1>TCG Game Fantasi</h1>
+    
+    <div id="game-log">
+        Selamat datang! Klik "Mulai Game" untuk memulai.
+    </div>
+
+    <div id="controls">
+        <button id="start-btn">Mulai Game</button>
+        <hr>
+        <h3>Aksi Pemain</h3>
+        <input type="number" id="card-select-input" placeholder="Nomor Kartu Pilihan">
+        <button id="select-btn">Pilih Kartu</button>
+        <hr>
+        <input type="number" id="player-card-idx" placeholder="No. Kartu Anda">
+        <select id="action-type">
+            <option value="basic">Basic Attack</option>
+            <option value="skill">Skill</option>
+        </select>
+        <input type="number" id="enemy-target-idx" placeholder="No. Target Musuh">
+        <button id="action-btn">Lakukan Aksi</button>
+        <hr>
+        <button id="status-btn">Cek Status</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
