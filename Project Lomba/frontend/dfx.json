@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.15.1",
+  "canisters": {
+    "tcg_game_backend": {
+      "type": "motoko",
+      "main": "src/tcg_game_backend/main.mo"
+    },
+    "tcg_game_frontend": {
+      "type": "assets",
+      "source": [
+        "src/tcg_game_frontend/assets"
+      ],
+      "dependencies": [
+        "tcg_game_backend"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
